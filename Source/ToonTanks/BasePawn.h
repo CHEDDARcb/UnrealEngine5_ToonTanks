@@ -19,6 +19,8 @@ protected:
 	//player, TowerªÎTurretª¬üÞ?ªÇª­ªëªèª¦ªËª¹ªëª¿ªáBasePawnªËíÂà÷
 	void RotateTurret(FVector LookAtTarget);
 
+	void Fire();
+
 private:
 	UPROPERTY(VisibleAnywhere, BluePrintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
 	class UCapsuleComponent* CapsuleComp;

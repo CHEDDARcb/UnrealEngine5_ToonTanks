@@ -23,6 +23,9 @@ void ATank::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 	//移動・回転の入力をバインディングする
 	PlayerInputComponent->BindAxis(TEXT("MoveForward"), this, &ATank::Move);
 	PlayerInputComponent->BindAxis(TEXT("Turn"), this, &ATank::Turn);
+
+	//射撃(Fire)の入力をバインディングする
+	PlayerInputComponent->BindAction(TEXT("Fire"), IE_Pressed, this, &ATank::Fire);
 }
 
 void ATank::Tick(float DeltaTime)
