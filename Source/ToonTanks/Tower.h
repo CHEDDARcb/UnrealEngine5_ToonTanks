@@ -25,4 +25,17 @@ private:
 
 	UPROPERTY(EditDefaultsOnly, Category = "Combat")
 	float FireRange = 300.f; //ŞÒïïËå×î
+
+	//?ªÎ?ŞÒÊàÌ°éÄTimer
+	FTimerHandle FireRateTimerHandle;
+
+	//?ŞÒÊàÌ°
+	UPROPERTY(EditDefaultsOnly, Category = "Combat")
+	float FireRate = 2.f;
+
+	//ŞÒïïËå×î?ŞÛ¡¡ŞÒïï?ªÇª¢ªìªĞtrueªòÚ÷ª¹
+	bool InFireRange();
+
+
+	void CheckFireCondition();
 };
